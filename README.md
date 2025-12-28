@@ -8,6 +8,8 @@ You need to enter developer mode on Roku to sideload the channel a detailed tuto
 * Eng: https://youtu.be/rPLHktW8c2I
 * PT-BR: https://youtu.be/vMI603btuTs
 
+Download SimpleIPTVRoku.zip file, enter on Roku Development Application Installer (via local ip, on web browser), and upload this zip file.
+
 There is a default playlist with (Mano TV - PT-BR). You can edit the m3u with your own or your iptv providers.
 
 Wait ~30 secs on black screen is normal. It's annoying, i know, but the ManoTV list is very long and takes a long time to load. I'm thinking of a solution for this right now...
