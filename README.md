@@ -11,3 +11,4 @@ There is a default playlist with (Mano TV - PT-BR). You can edit the m3u with yo
 
 * Sort into sections
 * The playlist window doesn't open on startup. To open it, press :arrow_left: to display the channel list and press :eight_spoked_asterisk:
+* Find channel pressing Counterclockwise arrow button
