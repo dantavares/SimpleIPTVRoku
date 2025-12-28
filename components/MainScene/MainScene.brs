@@ -1,6 +1,12 @@
 sub init()
     m.top.backgroundURI = "pkg:/images/background-controls.jpg"
-
+    
+    'Carregando lista
+    m.top.setFocus(true)
+    m.myLabel = m.top.findNode("clista")
+    m.myLabel.font.size=50
+    m.myLabel.color="0x72D7EEFF"
+    
     m.save_feed_url = m.top.FindNode("save_feed_url")  'Save url to registry
 
     m.get_channel_list = m.top.FindNode("get_channel_list") 'get url from registry and parse the feed
@@ -11,8 +17,12 @@ sub init()
 
     m.video = m.top.FindNode("Video")
     m.video.ObserveField("state", "checkState")
-
-    showdialog()  'Force a keyboard dialog.  
+    
+    m.get_channel_list.control = "RUN"
+    
+    m.myLabel.text=""
+    
+    
 End sub
 
 ' **************************************************************
@@ -21,8 +31,6 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
     result = false
     
     if(press)'
-    
-    
         if(key = "right")
             m.list.SetFocus(false)
             m.top.SetFocus(true)
@@ -98,14 +106,13 @@ end sub
 
 
 sub showdialog()
-    PRINT ">>>  ENTERING KEYBOARD <<<"
-
+    PRINT ">>>  Entrando no Teclado <<<"
 
     keyboarddialog = createObject("roSGNode", "KeyboardDialog")
     keyboarddialog.backgroundUri = "pkg:/images/rsgde_bg_hd.jpg"
-    keyboarddialog.title = "ENTER PLAYLIST HERE"
+    keyboarddialog.title = "Entre com a URL da Lista"
 
-    keyboarddialog.buttons=["OK","Set back to Demo", "Save"]
+    keyboarddialog.buttons=["OK","Lista ManoTV", "Salvar"]
     keyboarddialog.optionsDialog=true
 
     m.top.dialog = keyboarddialog
@@ -125,7 +132,7 @@ sub onKeyPress()
         m.top.dialog.close = true
         m.get_channel_list.control = "RUN"
     else if m.top.dialog.buttonSelected = 1 ' Set back to Demo
-        m.top.dialog.text = "https://tinyurl.com/yaoc6zpo"
+        m.top.dialog.text = "https://abre.ai/manotv3"
     else if m.top.dialog.buttonSelected = 2 ' Save
         m.global.feedurl = m.top.dialog.text
         m.save_feed_url.control = "RUN"

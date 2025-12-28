@@ -5,24 +5,36 @@
 <component name="MainScene" extends="Scene" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://rokudev.roku.com/rokudev/schema/RokuSceneGraph.xsd">
 <script type="text/brightscript" uri="pkg:/components/MainScene/MainScene.brs"/>
 <children>
+    
+    <Label id="clista" 
+      	text="Carregando..."
+      	width="1280" 
+      	height="720" 
+      	horizAlign="center"
+      	vertAlign="center"
+     />
+    
     <LabelList
     	id="list"
     	translation = "[150, 150]"
-    	/>
+    />
     	
     <Video
-    id="Video"
-    translation = "[800, 100]"
-    width = "960"
-    height= "540"/>
+    	id="Video"
+    	translation = "[800, 100]"
+    	width = "960"
+    	height= "540"
+    />
     
     <get_channel_list
     	id="get_channel_list"
-    	control="STOP"/>
+    	control="STOP"
+    />
     	
     <save_feed_url
     	id="save_feed_url"
-    	control="STOP"/>
+    	control="STOP"
+    />
     	
 </children>
 </component>
