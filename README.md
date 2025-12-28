@@ -1,4 +1,4 @@
-# SimpleIPTVRoku
+# SimpleIPTVRoku (Português BraSil)
 A Basic Roku channel for watching IPTV on the Roku
 
 This was forked from sudo97 
