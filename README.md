@@ -1,19 +1,19 @@
-# SimpleIPTVRoku (Português BraSil)
-A Basic Roku channel for watching IPTV on the Roku
+# ManoTV IPTV Para Roku
+Um canal básico para Roku para assistir IPTV da Lista ManoTV
 
-This was forked from sudo97 
-Added a few more containers to play mp4 mkv etc 
+Este canal foi derivado do projeto do sudo97.
+Adicionados alguns contêineres para reproduzir MP4, MKV, etc.
 
-You need to enter developer mode on Roku to sideload the channel a detailed tutorial can be found here 
-* Eng: https://youtu.be/rPLHktW8c2I
-* PT-BR: https://youtu.be/vMI603btuTs
+Você precisa ativar o modo desenvolvedor no Roku para instalar o canal. Um tutorial detalhado pode ser encontrado aqui:
+https://youtu.be/vMI603btuTs
 
-Download SimpleIPTVRoku.zip file, enter on Roku Development Application Installer (via local ip, on web browser), and upload this zip file.
+Baixe o arquivo ManoTV.zip, acesse o instalador de aplicativos de desenvolvimento do Roku (via IP local, em um navegador da web) e instale o arquivo zip.
 
-There is a default playlist with (Mano TV - PT-BR). You can edit the m3u with your own or your iptv providers.
+Há uma lista de reprodução padrão com o Mano TV, Mas você pode editar com sua própria lista.
 
-Wait ~30 secs on black screen is normal. It's annoying, i know, but the ManoTV list is very long and takes a long time to load. I'm thinking of a solution for this right now...
+Aguardar cerca de 30 segundos com a tela preta é normal. É irritante, eu sei, mas a lista do ManoTV é muito longa e demora para carregar. Estou pensando em uma solução para isso agora mesmo...
 
-* Sort into sections
-* The playlist window doesn't open on startup. To open it, press :arrow_backward: to display the channel list and press :eight_spoked_asterisk:
-* Find channel pressing Counterclockwise arrow button. Forked: https://github.com/Kasmaristo-Delvakto/SimpleIPTVRoku
+Notas da Versão:
+* Classificação por seções
+* Para editar a lista de reprodução, pressione :arrow_backward: para exibir a lista de canais e pressione asteristico :eight_spoked_asterisk:
+* Encontre o canal pressionando o botão de seta no sentido anti-horário. Baseado em: https://github.com/Kasmaristo-Delvakto/SimpleIPTVRoku
