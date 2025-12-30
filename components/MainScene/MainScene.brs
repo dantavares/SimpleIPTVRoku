@@ -18,7 +18,7 @@ sub init()
     m.fullContent = invalid
     m.searchTerm  = ""
 
-    m.get_channel_list.control = "RUN"
+   m.get_channel_list.control = "RUN"
 end sub
 
 ' **************************************************************
@@ -48,6 +48,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
             m.video.translation = [800, 100]
             m.video.width = 960
             m.video.height = 540
+            m.video.control = "stop"
             result = true
 
         else if key = "options" then
@@ -104,7 +105,7 @@ sub setChannel()
     content.streamFormat = "hls, mp4, mkv, mp3, avi, m4v, ts, mpeg-4, flv, vob, ogg, ogv, webm, mov, wmv, asf, amv, mpg, mp2, mpeg, mpe, mpv, mpeg2"
 
     ' Avoid restarting the same stream
-    if m.video.content <> invalid and m.video.content.url = content.url then return
+    'if m.video.content <> invalid and m.video.content.url = content.url then return
 
     content.HttpSendClientCertificates = true
     content.HttpCertificatesFile = "common:/certs/ca-bundle.crt"
@@ -115,7 +116,7 @@ sub setChannel()
     m.video.content = content
 
     m.top.backgroundURI = "pkg:/images/rsgde_bg_hd.jpg"
-    m.video.trickplaybarvisibilityauto = false
+    m.video.trickplaybarvisibilityauto = true
 
     m.video.control = "play"
 end sub
@@ -252,7 +253,6 @@ sub showdialog()
 
     KeyboardDialog.observeFieldScoped("buttonSelected","onKeyPress")  'we observe button ok/cancel, if so goto to onKeyPress sub
 end sub
-
 
 sub onKeyPress()
     if m.top.dialog.buttonSelected = 0 ' OK
