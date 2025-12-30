@@ -11,7 +11,7 @@ Baixe o arquivo ManoTV.zip, acesse o instalador de aplicativos de desenvolviment
 
 Há uma lista de reprodução padrão com o Mano TV, Mas você pode editar com sua própria lista.
 
-Aguardar cerca de 30 segundos com a tela preta é normal. É irritante, eu sei, mas a lista do ManoTV é muito longa e demora para carregar. Estou pensando em uma solução para isso agora mesmo...
+**Pode demorar uns 30 segundos com a tela preta, é normal.** É irritante, eu sei, mas a lista do ManoTV é muito longa e demora para carregar. Estou pensando em uma solução para isso agora mesmo...
 
 Notas da Versão:
 * Classificação por seções
