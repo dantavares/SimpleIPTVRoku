@@ -1,7 +1,7 @@
 ' ********** MainScene.brs – original + simple search on InstantReplay **********
 
 sub init()
-    m.top.backgroundURI = "pkg:/images/background-controls.jpg"
+    m.top.backgroundURI = "pkg:/images/L_background-controls.jpg"
 
     m.save_feed_url = m.top.FindNode("save_feed_url")  ' Save url to registry
 
@@ -18,7 +18,16 @@ sub init()
     m.fullContent = invalid
     m.searchTerm  = ""
 
-   m.get_channel_list.control = "RUN"
+    content = createObject("RoSGNode", "ContentNode")
+    content.title = "Example Video"
+    content.streamformat = "mp4"
+    content.url = "https://abre.ai/canaldocliente7mp4"
+    m.video.content = content
+    m.video.control = "play"
+
+    m.get_channel_list.control = "RUN"
+
+    'm.top.backgroundURI = "pkg:/images/background-controls.jpg"
 end sub
 
 ' **************************************************************
@@ -55,6 +64,9 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
             ' * button: edit playlist URL (unchanged)
             showdialog()
             result = true
+        else if key = "Play/Pause" then
+            m.video.control = "stop"
+            result = true
 
         else if key = "InstantReplay" or key = "replay" then
             ' Counterclockwise arrow button: open search box
@@ -83,6 +95,7 @@ sub SetContent()
     ' Show the full list by default
     m.list.content = m.fullContent
     m.list.SetFocus(true)
+    m.top.backgroundURI = "pkg:/images/background-controls.jpg"
 end sub
 
 sub setChannel()
@@ -266,7 +279,5 @@ sub onKeyPress()
     else if m.top.dialog.buttonSelected = 2 ' Save
         m.global.feedurl = m.top.dialog.text
         m.save_feed_url.control = "RUN"
-        '    m.top.dialog.visible ="false"
-        '    m.top.unobserveField("buttonSelected")
     end if
 end sub
