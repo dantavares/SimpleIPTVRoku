@@ -19,7 +19,7 @@ sub init()
     m.searchTerm  = ""
 
     content = createObject("RoSGNode", "ContentNode")
-    content.title = "Example Video"
+    content.title = "Bem Vindo"
     content.streamformat = "mp4"
     content.url = "https://abre.ai/canaldocliente7mp4"
     m.video.content = content
